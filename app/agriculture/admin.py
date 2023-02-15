@@ -9,6 +9,8 @@ from agriculture.models import (
     Season
 )
 
+
+
 @admin.register(Farmer)
 class FarmerAdmin(admin.ModelAdmin):
     list_display = ('name',)
@@ -20,6 +22,7 @@ class CultureAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
     list_filter = ('name',)
+    
 
 admin.site.register(Plot)
 admin.site.register(Season)
