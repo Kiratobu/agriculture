@@ -9,34 +9,3 @@ class Migration(migrations.Migration):
 
     dependencies = [
     ]
-
-    operations = [
-        migrations.CreateModel(
-            name='Culture',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, verbose_name='Название культуры')),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Farmer',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, verbose_name='Имя')),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Plot',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, verbose_name='Название поля')),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Season',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, verbose_name='Название сезона')),
-            ],
-        ),
-    ]
