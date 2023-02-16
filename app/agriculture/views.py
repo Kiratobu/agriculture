@@ -21,7 +21,6 @@ class PlotAPIView(generics.ListCreateAPIView):
     def get_serializer_context(self):
         context = super(PlotAPIView, self).get_serializer_context()
         context.update({"request_farmer_id": self.request.user.farmer})
-        print(context)
         return context
     
 class PlotDetailAPIView(generics.RetrieveUpdateDestroyAPIView):

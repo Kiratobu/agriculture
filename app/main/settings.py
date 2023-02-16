@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'rest_framework',
+    # 'django.contrib.gis',
     
     'agriculture',
 ]
@@ -136,3 +137,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# GDAL_LIBRARY_PATH = '/home/sue/local/lib/libgdal.so'
+
+LOGIN_REDIRECT_URL = '/plot/'
