@@ -4,6 +4,12 @@ from agriculture.models import Plot
 
 class PlotSerializer(serializers.ModelSerializer):
     
+    def create(self,validated_data):
+            farmer = self.context['request_farmer_id']
+            validated_data['farmer'] = farmer
+            plot = Plot.objects.create(**validated_data)
+            return plot
+    
     class Meta:
         model = Plot
         fields = [
@@ -11,9 +17,3 @@ class PlotSerializer(serializers.ModelSerializer):
             'culture',
             'season'
         ]
-        
-        # def create(self, request, validated_data):
-        #     user = self.context['request_user_id']
-        #     validated_data['farmer'] = user
-        #     event_type = Plot.objects.create(**validated_data)
-        #     return event_type
