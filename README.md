@@ -21,9 +21,17 @@
   <li>DATABASE</li>
 </ul>
 
-И выполняем команду: 
+Обращаю внимание, что поле SQL_ENGINE из-за зависимости с пакетом GeoDjango будет являться:
+
+SQL_ENGINE=django.contrib.gis.db.backends.postgis
+
+Выполняем команду: 
 
 <b>docker-compose -f   docker-compose.yml up -d --build</b>
+
+Так же при возникновении конфликта сбора контейнера с версионностью Linux нужно в .env добавить поле:
+
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 Создаем базу данных в PostgreSQL и подключаем её к контейнеру(в настройках контейнера указан порт 5433:5432)
 
