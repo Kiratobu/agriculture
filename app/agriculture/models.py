@@ -1,4 +1,4 @@
-from django.db import models
+from django.contrib.gis.db import models
 from django.contrib.auth.models import User
 
 
@@ -27,7 +27,7 @@ class Season(models.Model):
 class Plot(models.Model):
 
     name = models.CharField(max_length=255, verbose_name='Название поля')
-    # location = models.PointField()
+    location = models.MultiPolygonField()
     farmer = models.ForeignKey(Farmer,
                                on_delete=models.CASCADE,
                                related_name='farmer')

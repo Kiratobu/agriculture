@@ -18,7 +18,7 @@ class PlotAPIView(generics.ListCreateAPIView):
         )
         return queryset
     
-    def get_serializer_context(self):
+    def get_serializer_context(self):   
         context = super(PlotAPIView, self).get_serializer_context()
         context.update({"request_farmer_id": self.request.user.farmer})
         return context

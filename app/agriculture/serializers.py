@@ -15,5 +15,6 @@ class PlotSerializer(serializers.ModelSerializer):
         fields = [
             'name',
             'culture',
-            'season'
+            'season',
+            'location'
         ]
